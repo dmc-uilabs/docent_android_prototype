@@ -66,6 +66,34 @@
         <item>Industrial capability assessment for FRP has been completed and capability is in place to support start of FRP.</item>
         <item>Industrial capability supports FRP. Industrial capability assessed to support modifications, upgrades, surge and other potential manufacturing requirements.</item>
     </string-array>
+    <string-array name="criteriaThread3">
+        <item></item>
+        <item></item>
+        <item>Should be assessed at TRL 1</item>
+        <item>Should be assessed at TRL 2</item>
+        <item>Should be assessed at TRL 3</item>
+        <item>Should be assessed at TRL 4</item>
+        <item>Should be assessed at TRL 5</item>
+        <item>Should be assessed at TRL 6</item>
+        <item>Should be assessed at TRL 7</item>
+        <item>Should be assessed at TRL 7 or TRL 8</item>
+        <item>Should be assessed at TRL 8 or TRL 9</item>
+        <item>Should be assessed at TRL 9</item>
+    </string-array>
+    <string-array name="criteriaThread4">
+        <item></item>
+        <item></item>
+        <item>Should be assessed at TRL 1</item>
+        <item>Should be assessed at TRL 2</item>
+        <item>Should be assessed at TRL 3</item>
+        <item>Should be assessed at TRL 4</item>
+        <item>Should be assessed at TRL 5</item>
+        <item>Should be assessed at TRL 6</item>
+        <item>Should be assessed at TRL 7</item>
+        <item>Should be assessed at TRL 7 or TRL 8</item>
+        <item>Should be assessed at TRL 8 or TRL 9</item>
+        <item>Should be assessed at TRL 9</item>
+    </string-array>
     <string-array name="deskbookVersions">
         <item>V2.4 - August 2015</item>
     </string-array>

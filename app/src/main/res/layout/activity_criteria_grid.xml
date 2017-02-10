@@ -12,6 +12,7 @@
     tools:context="com.integris.mra.CriteriaGridActivity">
 
     <RadioGroup
+        android:id="@+id/rgShowCriteria"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal">
@@ -39,124 +40,218 @@
         android:id="@+id/layoutThread"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:visibility="gone">
         <Spinner
             android:id="@+id/spThreads"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
             android:entries="@array/threadsArray"/>
         <ScrollView
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content">
             <TableLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
                 <TableRow
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content">
+                    android:layout_margin="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/blue_rectangle">
                     <TextView
-                        android:layout_width="wrap_content"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="1"/>
+                        android:text="1"
+                        android:textSize="15dp"
+                        android:textColor="#FFFFFF"
+                        android:textAlignment="center"
+                        />
+                </TableRow>
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp">
                     <TextView
                         android:id="@+id/tvThreadCriteria1"
-                        android:layout_width="wrap_content"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text=""/>
                 </TableRow>
-                <TableRow>
+                <TableRow
+                    android:layout_margin="10dp"
+                    android:background="@drawable/blue_rectangle">
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="2"/>
+                        android:layout_gravity="center_vertical"
+                        android:text="2"
+                        android:textSize="15dp"
+                        android:textColor="#FFFFFF"
+                        android:textAlignment="center"/>
+                </TableRow>
+                <TableRow
+                    android:layout_margin="10dp">
                     <TextView
                         android:id="@+id/tvThreadCriteria2"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text=""/>
                 </TableRow>
-                <TableRow>
+                <TableRow
+                    android:layout_margin="10dp"
+                    android:background="@drawable/blue_rectangle">
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="3"/>
+                        android:layout_gravity="center_vertical"
+                        android:text="3"
+                        android:textSize="15dp"
+                        android:textColor="#FFFFFF"
+                        android:textAlignment="center"/>
+                </TableRow>
+                <TableRow
+                    android:layout_margin="10dp">
                     <TextView
                         android:id="@+id/tvThreadCriteria3"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text=""/>
                 </TableRow>
-                <TableRow>
+                <TableRow
+                    android:layout_margin="10dp"
+                    android:background="@drawable/blue_rectangle">
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="4"/>
+                        android:layout_gravity="center_vertical"
+                        android:text="4"
+                        android:textSize="15dp"
+                        android:textColor="#FFFFFF"
+                        android:textAlignment="center"/>
+                </TableRow>
+                <TableRow
+                    android:layout_margin="10dp">
                     <TextView
                         android:id="@+id/tvThreadCriteria4"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text=""/>
                 </TableRow>
-                <TableRow>
+                <TableRow
+                    android:layout_margin="10dp"
+                    android:background="@drawable/blue_rectangle">
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="5"/>
+                        android:layout_gravity="center_vertical"
+                        android:text="5"
+                        android:textSize="15dp"
+                        android:textColor="#FFFFFF"
+                        android:textAlignment="center"/>
+                </TableRow>
+                <TableRow
+                    android:layout_margin="10dp">
                     <TextView
                         android:id="@+id/tvThreadCriteria5"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text=""/>
                 </TableRow>
-                <TableRow>
+                <TableRow
+                    android:layout_margin="10dp"
+                    android:background="@drawable/blue_rectangle">
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="6"/>
+                        android:layout_gravity="center_vertical"
+                        android:text="6"
+                        android:textSize="15dp"
+                        android:textColor="#FFFFFF"
+                        android:textAlignment="center"/>
+                </TableRow>
+                <TableRow
+                    android:layout_margin="10dp">
                     <TextView
                         android:id="@+id/tvThreadCriteria6"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text=""/>
                 </TableRow>
-                <TableRow>
+                <TableRow
+                    android:layout_margin="10dp"
+                    android:background="@drawable/blue_rectangle">
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="7"/>
+                        android:layout_gravity="center_vertical"
+                        android:text="7"
+                        android:textSize="15dp"
+                        android:textColor="#FFFFFF"
+                        android:textAlignment="center"/>
+                </TableRow>
+                <TableRow
+                    android:layout_margin="10dp">
                     <TextView
                         android:id="@+id/tvThreadCriteria7"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text=""/>
                 </TableRow>
-                <TableRow>
+                <TableRow
+                    android:layout_margin="10dp"
+                    android:background="@drawable/blue_rectangle">
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="8"/>
+                        android:layout_gravity="center_vertical"
+                        android:text="8"
+                        android:textSize="15dp"
+                        android:textColor="#FFFFFF"
+                        android:textAlignment="center"/>
+                </TableRow>
+                <TableRow
+                    android:layout_margin="10dp">
                     <TextView
                         android:id="@+id/tvThreadCriteria8"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text=""/>
                 </TableRow>
-                <TableRow>
+                <TableRow
+                    android:layout_margin="10dp"
+                    android:background="@drawable/blue_rectangle">
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="9"/>
+                        android:layout_gravity="center_vertical"
+                        android:text="9"
+                        android:textSize="15dp"
+                        android:textColor="#FFFFFF"
+                        android:textAlignment="center"/>
+                </TableRow>
+                <TableRow
+                    android:layout_margin="10dp">
                     <TextView
                         android:id="@+id/tvThreadCriteria9"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text=""/>
                 </TableRow>
-                <TableRow>
+                <TableRow
+                    android:layout_margin="10dp"
+                    android:background="@drawable/blue_rectangle">
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="10"/>
+                        android:layout_gravity="center_vertical"
+                        android:text="10"
+                        android:textSize="15dp"
+                        android:textColor="#FFFFFF"
+                        android:textAlignment="center"/>
+                </TableRow>
+                <TableRow
+                    android:layout_margin="10dp">
                     <TextView
                         android:id="@+id/tvThreadCriteria10"
                         android:layout_width="wrap_content"
@@ -170,8 +265,7 @@
         android:id="@+id/layoutAll"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:visibility="gone">
+        android:orientation="vertical">
         <TableLayout
             android:id="@+id/tableCriteriaHeader"
             android:layout_width="match_parent"
@@ -262,5 +356,133 @@
         android:layout_height="wrap_content"
         android:orientation="vertical"
         android:visibility="gone">
+        <RadioGroup
+            android:id="@+id/rgChooseLevel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <RadioButton
+                android:id="@+id/rbLevel1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="true"
+                android:text="1">
+            </RadioButton>
+            <RadioButton
+                android:id="@+id/rbLevel2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="2">
+            </RadioButton>
+            <RadioButton
+                android:id="@+id/rbLevel3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="3">
+            </RadioButton>
+            <RadioButton
+                android:id="@+id/rbLevel4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="4">
+            </RadioButton>
+            <RadioButton
+                android:id="@+id/rbLevel5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="5">
+            </RadioButton>
+            <RadioButton
+                android:id="@+id/rbLevel6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="6">
+            </RadioButton>
+            <RadioButton
+                android:id="@+id/rbLevel7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="7">
+            </RadioButton>
+            <RadioButton
+                android:id="@+id/rbLevel8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="8">
+            </RadioButton>
+            <RadioButton
+                android:id="@+id/rbLevel9"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="9">
+            </RadioButton>
+            <RadioButton
+                android:id="@+id/rbLevel10"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="10">
+            </RadioButton>
+        </RadioGroup>
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:text="Technology Maturity"
+                    android:textSize="15dp"
+                    android:textColor="#FFFFFF"
+                    android:textAlignment="center"
+                    android:background="@drawable/blue_rectangle"/>
+                <TextView
+                    android:id="@+id/tvThread1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:text="Technology and Industrial Base"
+                    android:textSize="15dp"
+                    android:textColor="#FFFFFF"
+                    android:textAlignment="center"
+                    android:background="@drawable/blue_rectangle"/>
+                <TextView
+                    android:id="@+id/tvThread2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:text="Design"
+                    android:textSize="15dp"
+                    android:textColor="#FFFFFF"
+                    android:textAlignment="center"
+                    android:background="@drawable/blue_rectangle"/>
+                <TextView
+                    android:id="@+id/tvThread3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:text="Cost and Funding"
+                    android:textSize="15dp"
+                    android:textColor="#FFFFFF"
+                    android:textAlignment="center"
+                    android:background="@drawable/blue_rectangle"/>
+                <TextView
+                    android:id="@+id/tvThread4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+            </LinearLayout>
+        </ScrollView>
     </LinearLayout>
 </LinearLayout>

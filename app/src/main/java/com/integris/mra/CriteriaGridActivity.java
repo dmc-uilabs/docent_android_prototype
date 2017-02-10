@@ -13,10 +13,13 @@ import android.widget.CompoundButton;
 import android.widget.GridView;
 import android.widget.LinearLayout;
 import android.widget.RadioButton;
+import android.widget.RadioGroup;
 import android.widget.Spinner;
 import android.widget.TableLayout;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import org.w3c.dom.Text;
 
 /**
  * Created by cameron.kagy on 2/9/2017.
@@ -35,9 +38,8 @@ public class CriteriaGridActivity extends AppCompatActivity {
     private CheckBox mCbCol9;
     private CheckBox mCbCol10;
     private TableLayout mTableCriteria;
-    private RadioButton mRbThread;
-    private RadioButton mRbAll;
-    private RadioButton mRbLevel;
+    private RadioGroup mRgShowCriteria;
+    private RadioGroup mRgChooseLevel;
     private LinearLayout mLayoutAll;
     private LinearLayout mLayoutThread;
     private LinearLayout mLayoutLevel;
@@ -77,41 +79,41 @@ public class CriteriaGridActivity extends AppCompatActivity {
                     criteriaStrings = getResources().getStringArray(R.array.criteriaThread2);
                 }
                 if(position == 2){
-                    criteriaStrings = getResources().getStringArray(R.array.criteriaThread2);
+                    criteriaStrings = getResources().getStringArray(R.array.criteriaThread3);
                 }
                 if(position == 3){
-                    criteriaStrings = getResources().getStringArray(R.array.criteriaThread2);
+                    criteriaStrings = getResources().getStringArray(R.array.criteriaThread4);
                 }
 
                 TextView tv1 = (TextView) findViewById(R.id.tvThreadCriteria1);
-                tv1.setText(criteriaStrings[0]);
+                tv1.setText(criteriaStrings[2]);
 
                 TextView tv2 = (TextView) findViewById(R.id.tvThreadCriteria2);
-                tv2.setText(criteriaStrings[1]);
+                tv2.setText(criteriaStrings[3]);
 
                 TextView tv3 = (TextView) findViewById(R.id.tvThreadCriteria3);
-                tv3.setText(criteriaStrings[2]);
+                tv3.setText(criteriaStrings[4]);
 
                 TextView tv4 = (TextView) findViewById(R.id.tvThreadCriteria4);
-                tv4.setText(criteriaStrings[3]);
+                tv4.setText(criteriaStrings[5]);
 
                 TextView tv5 = (TextView) findViewById(R.id.tvThreadCriteria5);
-                tv5.setText(criteriaStrings[4]);
+                tv5.setText(criteriaStrings[6]);
 
                 TextView tv6 = (TextView) findViewById(R.id.tvThreadCriteria6);
-                tv6.setText(criteriaStrings[5]);
+                tv6.setText(criteriaStrings[7]);
 
                 TextView tv7 = (TextView) findViewById(R.id.tvThreadCriteria7);
-                tv7.setText(criteriaStrings[6]);
+                tv7.setText(criteriaStrings[8]);
 
                 TextView tv8 = (TextView) findViewById(R.id.tvThreadCriteria8);
-                tv8.setText(criteriaStrings[7]);
+                tv8.setText(criteriaStrings[9]);
 
                 TextView tv9 = (TextView) findViewById(R.id.tvThreadCriteria9);
-                tv9.setText(criteriaStrings[8]);
+                tv9.setText(criteriaStrings[10]);
 
                 TextView tv10 = (TextView) findViewById(R.id.tvThreadCriteria10);
-                tv10.setText(criteriaStrings[9]);
+                tv10.setText(criteriaStrings[11]);
             }
 
             @Override
@@ -121,37 +123,79 @@ public class CriteriaGridActivity extends AppCompatActivity {
         });
 
 
-        mRbAll = (RadioButton) findViewById(R.id.rbAll);
-        mRbAll.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+        mRgShowCriteria = (RadioGroup) findViewById(R.id.rgShowCriteria);
+        mRgShowCriteria.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+
             @Override
-            public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
-                if(b){
+            public void onCheckedChanged(RadioGroup group, int checkedId) {
+                if(checkedId == R.id.rbLevel){
+                    mLayoutAll.setVisibility(View.GONE);
+                    mLayoutLevel.setVisibility(View.VISIBLE);
+                    mLayoutThread.setVisibility(View.GONE);
+                }
+                if(checkedId == R.id.rbThread){
+                    mLayoutAll.setVisibility(View.GONE);
+                    mLayoutLevel.setVisibility(View.GONE);
+                    mLayoutThread.setVisibility(View.VISIBLE);
+                }
+                if(checkedId == R.id.rbAll){
                     mLayoutAll.setVisibility(View.VISIBLE);
                     mLayoutLevel.setVisibility(View.GONE);
                     mLayoutThread.setVisibility(View.GONE);
                 }
             }
         });
-        mRbThread = (RadioButton) findViewById(R.id.rbThread);
-        mRbThread.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+
+        mRgChooseLevel = (RadioGroup) findViewById(R.id.rgChooseLevel);
+        mRgChooseLevel.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
-            public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
-                if(b) {
-                    mLayoutAll.setVisibility(View.GONE);
-                    mLayoutLevel.setVisibility(View.GONE);
-                    mLayoutThread.setVisibility(View.VISIBLE);
+            public void onCheckedChanged(RadioGroup radioGroup, int checkedId) {
+                int mrlLevel = 0;
+                if(checkedId == R.id.rbLevel1){
+                    mrlLevel = 1;
                 }
-            }
-        });
-        mRbLevel = (RadioButton) findViewById(R.id.rbLevel);
-        mRbLevel.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
-            @Override
-            public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
-                if(b) {
-                    mLayoutAll.setVisibility(View.GONE);
-                    mLayoutLevel.setVisibility(View.VISIBLE);
-                    mLayoutThread.setVisibility(View.GONE);
+                if(checkedId == R.id.rbLevel2){
+                    mrlLevel = 2;
                 }
+                if(checkedId == R.id.rbLevel3){
+                    mrlLevel = 3;
+                }
+                if(checkedId == R.id.rbLevel4){
+                    mrlLevel = 4;
+                }
+                if(checkedId == R.id.rbLevel5){
+                    mrlLevel = 5;
+                }
+                if(checkedId == R.id.rbLevel6){
+                    mrlLevel = 6;
+                }
+                if(checkedId == R.id.rbLevel7){
+                    mrlLevel = 7;
+                }
+                if(checkedId == R.id.rbLevel8){
+                    mrlLevel = 8;
+                }
+                if(checkedId == R.id.rbLevel9){
+                    mrlLevel = 9;
+                }
+                if(checkedId == R.id.rbLevel10){
+                    mrlLevel = 10;
+                }
+
+                TextView tvThread1 = (TextView) findViewById(R.id.tvThread1);
+                TextView tvThread2 = (TextView) findViewById(R.id.tvThread2);
+                TextView tvThread3 = (TextView) findViewById(R.id.tvThread3);
+                TextView tvThread4 = (TextView) findViewById(R.id.tvThread4);
+
+                String[] criteriaThread1 = getResources().getStringArray(R.array.criteriaThread1);
+                String[] criteriaThread2 = getResources().getStringArray(R.array.criteriaThread2);
+                String[] criteriaThread3 = getResources().getStringArray(R.array.criteriaThread3);
+                String[] criteriaThread4 = getResources().getStringArray(R.array.criteriaThread4);
+
+                tvThread1.setText(criteriaThread1[mrlLevel+1]);
+                tvThread2.setText(criteriaThread2[mrlLevel+1]);
+                tvThread3.setText(criteriaThread3[mrlLevel+1]);
+                tvThread4.setText(criteriaThread4[mrlLevel+1]);
             }
         });
 
@@ -236,19 +280,6 @@ public class CriteriaGridActivity extends AppCompatActivity {
                 mAdapter.setColumnVisibility(10, b);
             }
         });
-
-
-        RadioButton rbAll = (RadioButton) findViewById(R.id.rbAll);
-        rbAll.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
-            @Override
-            public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
-
-            }
-        });
-
-        RadioButton rbLevel = (RadioButton) findViewById(R.id.rbLevel);
-        RadioButton rbThread = (RadioButton) findViewById(R.id.rbThread);
-
 
     }
 
