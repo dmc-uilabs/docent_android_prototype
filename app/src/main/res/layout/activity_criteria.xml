@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:background="#EFEFEF"
+    tools:context="com.integris.mra.CriteriaActivity">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="25sp"
+            android:layout_margin="10sp"
+            android:text="Criteria Page"/>
+        <TableLayout
+                android:id="@+id/tableCriteriaHeader"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:stretchColumns="*"
+                android:background="@drawable/custom_rectangle">
+                <TableRow
+                    android:layout_marginTop="10dp">
+                    <TextView
+                        android:text="1"
+                        android:layout_marginLeft="10dp"
+                        android:textSize="15dp"/>
+                    <TextView
+                        android:text="2"
+                        android:layout_marginLeft="10dp"
+                        android:textSize="15dp"/>
+                    <TextView
+                        android:text="3"
+                        android:layout_marginLeft="10dp"
+                        android:textSize="15dp"/>
+                    <TextView
+                        android:text="4"
+                        android:layout_marginLeft="10dp"
+                        android:textSize="15dp"/>
+                    <TextView
+                        android:text="5"
+                        android:layout_marginLeft="10dp"
+                        android:textSize="15dp"/>
+                    <TextView
+                        android:text="6"
+                        android:layout_marginLeft="10dp"
+                        android:textSize="15dp"/>
+                    <TextView
+                        android:text="7"
+                        android:layout_marginLeft="10dp"
+                        android:textSize="15dp"/>
+                    <TextView
+                        android:text="8"
+                        android:layout_marginLeft="10dp"
+                        android:textSize="15dp"/>
+                    <TextView
+                        android:text="9"
+                        android:layout_marginLeft="10dp"
+                        android:textSize="15dp"/>
+                    <TextView
+                        android:text="10"
+                        android:layout_marginLeft="10dp"
+                        android:textSize="15dp"/>
+            </TableRow>
+            <TableRow>
+                <CheckBox
+                    android:id="@+id/cbCol1"/>
+                <CheckBox
+                    android:id="@+id/cbCol2"/>
+                <CheckBox
+                    android:id="@+id/cbCol3"/>
+                <CheckBox
+                    android:id="@+id/cbCol4"/>
+                <CheckBox
+                    android:id="@+id/cbCol5"/>
+                <CheckBox
+                    android:id="@+id/cbCol6"/>
+                <CheckBox
+                    android:id="@+id/cbCol7"/>
+                <CheckBox
+                    android:id="@+id/cbCol8"/>
+                <CheckBox
+                    android:id="@+id/cbCol9"/>
+                <CheckBox
+                    android:id="@+id/cbCol10"/>
+            </TableRow>
+        </TableLayout>
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TableLayout
+                android:id="@+id/tableCriteria"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:background="@drawable/custom_rectangle">
+                <TableRow>
+                    <TextView
+                        android:text=""
+                        android:layout_margin="10dp"
+                        android:textSize="15dp"/>
+                    <TextView
+                        android:text="Technology Maturity"
+                        android:layout_margin="10dp"
+                        android:textSize="10dp"/>
+                    <TextView
+                        android:text="Should be assessed at TRL 1"
+                        android:layout_margin="10dp"
+                        android:textSize="10dp"/>
+                    <TextView
+                        android:text="Should be assessed at TRL 2"
+                        android:layout_margin="10dp"
+                        android:textSize="10dp"/>
+                    <TextView
+                        android:text="Should be assessed at TRL 3"
+                        android:layout_margin="10dp"
+                        android:textSize="10dp"/>
+                    <TextView
+                        android:text="Should be assessed at TRL 4"
+                        android:layout_margin="10dp"
+                        android:textSize="10dp"/>
+                    <TextView
+                        android:text="Should be assessed at TRL 5"
+                        android:layout_margin="10dp"
+                        android:textSize="10dp"/>
+                    <TextView
+                        android:text="Should be assessed at TRL 6"
+                        android:layout_margin="10dp"
+                        android:textSize="10dp"/>
+                    <TextView
+                        android:text="Should be assessed at TRL 7"
+                        android:layout_margin="10dp"
+                        android:textSize="10dp"/>
+                    <TextView
+                        android:text="Should be assessed at TRL 7 or TRL 8"
+                        android:layout_margin="10dp"
+                        android:textSize="10dp"/>
+                    <TextView
+                        android:text="Should be assessed at TRL 8 or TRL 9"
+                        android:layout_margin="10dp"
+                        android:textSize="10dp"/>
+                    <TextView
+                        android:text="Should be assessed at TRL 9"
+                        android:layout_margin="10dp"
+                        android:textSize="10dp"/>
+                </TableRow>
+            </TableLayout>
+        </ScrollView>
+    </LinearLayout>
+</RelativeLayout>

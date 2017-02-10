@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:background="#EFEFEF"
+    tools:context="com.integris.mra.MainActivity">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="vertical"
+        android:orientation="vertical">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Start New Assessment"
+                android:textSize="25dp"
+                android:layout_margin="10dp"
+                android:layout_alignParentLeft="true"
+                android:id="@+id/tvStartNewAssessment" />
+            <Button
+                android:id="@+id/btnStart"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:text="Start"
+                android:layout_alignParentRight="true"
+                style="@style/Widget.AppCompat.Button.Colored"/>
+        </RelativeLayout>
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@drawable/custom_rectangle">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_margin="10dp"
+                    android:background="#EFEFEF">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Target:"
+                        android:textSize="10dp"
+                        android:layout_margin="10dp"
+                        android:id="@+id/tvTargetMrl" />
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="10dp"
+                            android:layout_margin="10dp"
+                            android:text="MRL:"/>
+
+                        <Spinner
+                            android:id="@+id/spTargetMrl"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="10dp"
+                            android:entries="@array/targetMrlArray"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Date:"
+                            android:textSize="10dp"
+                            android:layout_margin="10dp"
+                            android:id="@+id/tvTargetDate" />
+
+                        <EditText
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:inputType="date"
+                            android:layout_margin="10dp"
+                            android:hint="Date"
+                            android:ems="10"
+                            android:id="@+id/etTargetDate" />
+                    </LinearLayout>
+                </LinearLayout>
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Team Members:"
+                        android:layout_margin="10dp"
+                        android:textSize="10dp"
+                        android:layout_alignParentLeft="true"
+                        android:id="@+id/tvTeamMembers" />
+
+                    <EditText
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:inputType="textPersonName"
+                        android:layout_margin="10dp"
+                        android:hint="Name"
+                        android:layout_centerHorizontal="true"
+                        android:ems="10"
+                        android:id="@+id/etName" />
+
+                    <EditText
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/etRole"
+                        android:layout_margin="10dp"
+                        android:layout_alignParentRight="true"
+                        android:hint="Role"
+                        android:ems="10" />
+                    </RelativeLayout>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Scope:"
+                    android:layout_margin="10dp"
+                    android:textSize="10dp"
+                    android:id="@+id/tvScope" />
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/etScope"
+                    android:layout_margin="10dp"
+                    android:hint="Scope"
+                    android:scrollbars="vertical"
+                    android:minLines="2"
+                    android:ems="10" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Location:"
+                    android:layout_margin="10dp"
+                    android:textSize="10dp"
+                    android:id="@+id/tvLocation" />
+                <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/etLocation"
+                    android:layout_margin="10dp"
+                    android:hint="Location"
+                    android:ems="10" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Deskbook Version:"
+                    android:layout_margin="10dp"
+                    android:textSize="10dp"
+                    android:id="@+id/tvDeskbookVersion" />
+                <Spinner
+                    android:id="@+id/spDeskbookVersion"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:entries="@array/deskbookVersions"/>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <Button
+                        android:id="@+id/btnHelpImport"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Help Importing"
+                        android:layout_margin="10dp"
+                        style="@style/Widget.AppCompat.Button.Colored"/>
+                    <Button
+                        android:id="@+id/btnImport"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:text="Import Assessment"
+                        style="@style/Widget.AppCompat.Button.Colored"/>
+                </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+</RelativeLayout>

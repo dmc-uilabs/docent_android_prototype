@@ -1,0 +1,73 @@
+<resources>
+    <string name="app_name">Docent</string>
+    <string-array name="targetMrlArray">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+        <item>9</item>
+        <item>10</item>
+    </string-array>
+    <string-array name="answerArray">
+        <item>Choose answer</item>
+        <item>Yes</item>
+        <item>No</item>
+        <item>Not Applicable</item>
+    </string-array>
+    <string-array name="threadsArray">
+        <item>Technology Maturity</item>
+        <item>Technology and Industrial Base</item>
+        <item>Design</item>
+        <item>Cost and Funding</item>
+    </string-array>
+    <string-array name="criteriaThread0">
+        <item>Thread</item>
+        <item>Sub-Thread</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+        <item>9</item>
+        <item>10</item>
+    </string-array>
+    <string-array name="criteriaThread1">
+        <item></item>
+        <item></item>
+        <item>Should be assessed at TRL 1</item>
+        <item>Should be assessed at TRL 2</item>
+        <item>Should be assessed at TRL 3</item>
+        <item>Should be assessed at TRL 4</item>
+        <item>Should be assessed at TRL 5</item>
+        <item>Should be assessed at TRL 6</item>
+        <item>Should be assessed at TRL 7</item>
+        <item>Should be assessed at TRL 7 or TRL 8</item>
+        <item>Should be assessed at TRL 8 or TRL 9</item>
+        <item>Should be assessed at TRL 9</item>
+    </string-array>
+    <string-array name="criteriaThread2">
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item>Potential sources identified to address technology needs. Understand state of the art.</item>
+        <item>Industrial base capabilities surveyed and known gaps/risks identified for preferred concept, key technologies, components, and/or key processes.</item>
+        <item>Industrial base capabilities assessment initiated to identify potential manufacturing sources. Sole/single/ foreign source vendors and vendors of technologies with potential obsolescence issues have been identified and planning has begun to minimize risks.</item>
+        <item>Industrial base capabilities assessment for MS B has been completed. Industrial capability in place to support manufacturing of development articles. Plans to minimize sole/foreign sources and obsolescence issues complete. Need for sole/single/foreign sources justified. Potential alternative sources identified.</item>
+        <item>Industrial capability to support production has been analyzed. Sole/single/foreign sources stability and obsolescence issues are assessed/monitored. Developing potential alternate sources as necessary.</item>
+        <item>Industrial base capability assessment for MS C has been completed. Industrial capability is in place to support LRIP. Sources are available, multi-sourcing where cost-effective or necessary to mitigate risk.</item>
+        <item>Industrial capability assessment for FRP has been completed and capability is in place to support start of FRP.</item>
+        <item>Industrial capability supports FRP. Industrial capability assessed to support modifications, upgrades, surge and other potential manufacturing requirements.</item>
+    </string-array>
+    <string-array name="deskbookVersions">
+        <item>V2.4 - August 2015</item>
+    </string-array>
+    <string name="title_activity_questionnaire">QuestionnaireActivity</string>
+</resources>
