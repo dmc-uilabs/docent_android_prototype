@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -11,169 +11,259 @@
     tools:context="com.integris.mra.QuestionnaireActivity">
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:orientation="vertical">
-        <RelativeLayout
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-            <Button
-                android:id="@+id/btnBack"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentLeft="true"
-                android:layout_margin="10dp"
-                android:text="Back"
-                style="@style/Widget.AppCompat.Button.Colored"/>
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
             <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/etQuestionScope"
-                android:layout_centerHorizontal="true"
-                android:layout_margin="10dp"
-                android:text="Scope"/>
-            <Button
-                android:id="@+id/btnNext"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentRight="true"
-                android:layout_margin="10dp"
-                android:text="Next"
-                android:layout_gravity="right"
-                style="@style/Widget.AppCompat.Button.Colored"/>
-        </RelativeLayout>
-
-        <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/etQuestion"
-            android:text="Question"
+            android:text="Is the Technology Readiness at TRL 6 or greater?"
             android:textIsSelectable="false"
             android:layout_margin="10dp"
+            android:textAlignment="center"
             android:layout_gravity="center_horizontal"
-            android:textSize="25dp" />
-        <RelativeLayout
+            android:textSize="25dp"/>
+            <RadioGroup
+                android:id="@+id/rgAnswers"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:padding="10dp"
+                android:orientation="horizontal">
+                <RadioButton
+                    android:id="@+id/rbYes"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Yes"/>
+                <RadioButton
+                    android:id="@+id/rbNo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="No"/>
+                <RadioButton
+                    android:id="@+id/rbNA"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="N/A"/>
+            </RadioGroup>
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="2dp"
+                android:background="@color/colorPrimary"/>
+        </LinearLayout>
+
+        <ScrollView
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
-            <Spinner
-                android:id="@+id/spAnswer"
-                android:layout_centerHorizontal="true"
-                android:layout_width="wrap_content"
+            <LinearLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_margin="10dp"
-                android:entries="@array/answerArray"/>
-            <ImageButton
-                android:id="@+id/btnAttachFile"
-                android:layout_width="wrap_content"
+                android:orientation="vertical">
+                <LinearLayout
+                android:id="@+id/yesLayout"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_alignParentRight="true"
-                android:layout_margin="10dp"
-                android:src="@drawable/ic_attach_file_black_24dp" />
-        </RelativeLayout>
-        <LinearLayout
-            android:id="@+id/yesLayout"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:visibility="gone"
-            android:orientation="vertical">
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_margin="10dp"
-                android:textSize="10dp"
-                android:text="Documentation:"/>
-            <EditText
-            android:id="@+id/etDocumentation"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="10dp"
-            android:scrollbars="vertical"
-            android:minLines="2"
-            />
-        </LinearLayout>
-        <LinearLayout
-            android:id="@+id/notApplicableLayout"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:visibility="gone"
-            android:orientation="vertical">
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_margin="10dp"
-                android:textSize="10dp"
-                android:text="Evidence:"/>
-            <EditText
-                android:id="@+id/etEvidence"
+                android:visibility="gone"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:textSize="20dp"
+                    android:text="Documentation:"/>
+                <EditText
+                android:id="@+id/etDocumentation"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
                 android:scrollbars="vertical"
+                android:background="@drawable/custom_rectangle"
                 android:minLines="2"
                 />
-        </LinearLayout>
-        <LinearLayout
-            android:id="@+id/noLayout"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:visibility="gone"
-            android:orientation="vertical">
-            <TextView
+            </LinearLayout>
+                <LinearLayout
+                android:id="@+id/notApplicableLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:textSize="20dp"
+                    android:text="Evidence:"/>
+                <EditText
+                    android:id="@+id/etEvidence"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:scrollbars="vertical"
+                    android:background="@drawable/custom_rectangle"
+                    android:minLines="2"
+                    />
+            </LinearLayout>
+                <LinearLayout
+                android:id="@+id/noLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:textSize="20dp"
+                    android:text="Risk:"/>
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <CheckBox
+                        android:layout_height="wrap_content"
+                        android:id="@+id/rbRiskTechnical"
+                        android:layout_margin="10dp"
+                        android:layout_width="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:text="Technical"/>
+                    <CheckBox
+                        android:id="@+id/rbRiskSchedule"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_margin="10dp"
+                        android:text="Schedule"/>
+                    <CheckBox
+                        android:id="@+id/rbRiskCost"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:layout_alignParentRight="true"
+                        android:text="Cost"/>
+                </RelativeLayout>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:textSize="20dp"
+                    android:text="Completion Date:"/>
+                <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:inputType="date"
+                    android:layout_margin="10dp"
+                    android:hint="Date"
+                    android:ems="10"
+                    android:id="@+id/etCompletionDate" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:textSize="20dp"
+                    android:text="Who:"/>
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:hint="Name"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:textSize="20dp"
+                    android:text="What:"/>
+                <EditText
+                    android:id="@+id/etWhatAction"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:scrollbars="vertical"
+                    android:background="@drawable/custom_rectangle"
+                    android:minLines="2"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:textSize="20dp"
+                    android:text="Reason:"/>
+                <EditText
+                    android:id="@+id/etReason"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:scrollbars="vertical"
+                    android:background="@drawable/custom_rectangle"
+                    android:minLines="2"
+                    />
+            </LinearLayout>
+                <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
-                android:textSize="10dp"
-                android:text="What:"/>
-            <EditText
-                android:id="@+id/etWhatAction"
+                android:textSize="20dp"
+                android:text="Assumptions:"/>
+                <EditText
+                android:id="@+id/etAssumptions"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
                 android:scrollbars="vertical"
+                android:background="@drawable/custom_rectangle"
                 android:minLines="2"
                 />
-            <TextView
+                <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
-                android:textSize="10dp"
-                android:text="Reason:"/>
-            <EditText
-                android:id="@+id/etReason"
+                android:textSize="20dp"
+                android:text="Notes:"/>
+                <EditText
+                android:id="@+id/etNotes"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
                 android:scrollbars="vertical"
+                android:background="@drawable/custom_rectangle"
                 android:minLines="2"
                 />
-        </LinearLayout>
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_margin="10dp"
-            android:textSize="10dp"
-            android:text="Assumptions:"/>
-        <EditText
-            android:id="@+id/etAssumptions"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="10dp"
-            android:scrollbars="vertical"
-            android:minLines="2"
-            />
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_margin="10dp"
-            android:textSize="10dp"
-            android:text="Notes:"/>
-        <EditText
-            android:id="@+id/etNotes"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="10dp"
-            android:scrollbars="vertical"
-            android:minLines="2"
-            />
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <Button
+                        android:id="@+id/btnBack"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="#FFFFFF"
+                        android:layout_margin="10dp"
+                        android:layout_alignParentLeft="true"
+                        android:text="Back"
+                        android:background="@drawable/blue_rectangle"/>
+                    <ImageButton
+                        android:id="@+id/btnAttachFile"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:layout_centerHorizontal="true"
+                        android:src="@drawable/ic_attach_file_black_24dp" />
+                    <Button
+                        android:id="@+id/btnNext"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:textColor="#FFFFFF"
+                        android:layout_alignParentRight="true"
+                        android:text="Next"
+                        android:background="@drawable/blue_rectangle"/>
+                </RelativeLayout>
+            </LinearLayout>
+        </ScrollView>
+
     </LinearLayout>
 
-</RelativeLayout>
+</LinearLayout>

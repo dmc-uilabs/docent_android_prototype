@@ -147,10 +147,6 @@ public class CriteriaActivity extends AppCompatActivity {
                 Intent assessmentIntent = new Intent(CriteriaActivity.this, MainActivity.class);
                 startActivity(assessmentIntent);
                 return true;
-            case R.id.menuMilestones:
-                Intent milestonesIntent = new Intent(CriteriaActivity.this, MilestonesActivity.class);
-                startActivity(milestonesIntent);
-                return true;
             default:
                 return super.onOptionsItemSelected(item);
         }

@@ -41,12 +41,4 @@ public class MilestonesActivity extends AppCompatActivity {
                 return super.onOptionsItemSelected(item);
         }
     }
-
-    @Override
-    public boolean onPrepareOptionsMenu (Menu menu) {
-
-        MenuItem item = menu.findItem(R.id.menuMilestones);
-        item.setEnabled(false);
-        return true;
-    }
 }

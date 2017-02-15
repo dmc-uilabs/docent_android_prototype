@@ -17,119 +17,125 @@
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
-
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Start New Assessment"
+                android:layout_margin="10dp"
                 android:textSize="25dp"
-                android:layout_margin="10dp"
                 android:layout_alignParentLeft="true"
-                android:id="@+id/tvStartNewAssessment" />
-            <Button
-                android:id="@+id/btnStart"
-                android:layout_width="wrap_content"
+                android:text="New Assessment"/>
+            <ImageView
+                android:layout_width="100dp"
                 android:layout_height="wrap_content"
-                android:layout_margin="10dp"
-                android:text="Start"
+                android:adjustViewBounds="true"
                 android:layout_alignParentRight="true"
-                style="@style/Widget.AppCompat.Button.Colored"/>
+                android:src="@drawable/docent_logo_small"/>
         </RelativeLayout>
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="2dp"
+            android:background="@color/colorPrimary"/>
         <ScrollView
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:fillViewport="true">
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:background="@drawable/custom_rectangle">
-                <LinearLayout
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="20dp"
+                    android:layout_margin="10dp"
+                    android:text="MRL:"/>
+                <RadioGroup
+                    android:id="@+id/rgTargetLevel"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="vertical"
+                    android:orientation="horizontal">
+                    <RadioButton
+                        android:id="@+id/rbTargetLevel1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:checked="true"
+                        android:text="1">
+                    </RadioButton>
+                    <RadioButton
+                        android:id="@+id/rbTargetLevel2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="2">
+                    </RadioButton>
+                    <RadioButton
+                        android:id="@+id/rbTargetLevel3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="3">
+                    </RadioButton>
+                    <RadioButton
+                        android:id="@+id/rbTargetLevel4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="4">
+                    </RadioButton>
+                    <RadioButton
+                        android:id="@+id/rbTargetLevel5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="5">
+                    </RadioButton>
+                    <RadioButton
+                        android:id="@+id/rbTargetLevel6"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="6">
+                    </RadioButton>
+                    <RadioButton
+                        android:id="@+id/rbTargetLevel7"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="7">
+                    </RadioButton>
+                    <RadioButton
+                        android:id="@+id/rbTargetLevel8"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="8">
+                    </RadioButton>
+                    <RadioButton
+                        android:id="@+id/rbTargetLevel9"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="9">
+                    </RadioButton>
+                    <RadioButton
+                        android:id="@+id/rbTargetLevel10"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="10">
+                    </RadioButton>
+                </RadioGroup>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="20dp"
                     android:layout_margin="10dp"
-                    android:background="#EFEFEF">
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Target:"
-                        android:textSize="10dp"
-                        android:layout_margin="10dp"
-                        android:id="@+id/tvTargetMrl" />
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="horizontal">
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:textSize="10dp"
-                            android:layout_margin="10dp"
-                            android:text="MRL:"/>
-
-                        <Spinner
-                            android:id="@+id/spTargetMrl"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_margin="10dp"
-                            android:entries="@array/targetMrlArray"/>
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Date:"
-                            android:textSize="10dp"
-                            android:layout_margin="10dp"
-                            android:id="@+id/tvTargetDate" />
-
-                        <EditText
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:inputType="date"
-                            android:layout_margin="10dp"
-                            android:hint="Date"
-                            android:ems="10"
-                            android:id="@+id/etTargetDate" />
-                    </LinearLayout>
-                </LinearLayout>
-                <RelativeLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Team Members:"
-                        android:layout_margin="10dp"
-                        android:textSize="10dp"
-                        android:layout_alignParentLeft="true"
-                        android:id="@+id/tvTeamMembers" />
-
-                    <EditText
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:inputType="textPersonName"
-                        android:layout_margin="10dp"
-                        android:hint="Name"
-                        android:layout_centerHorizontal="true"
-                        android:ems="10"
-                        android:id="@+id/etName" />
-
-                    <EditText
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/etRole"
-                        android:layout_margin="10dp"
-                        android:layout_alignParentRight="true"
-                        android:hint="Role"
-                        android:ems="10" />
-                    </RelativeLayout>
+                    android:text="Date:"/>
+                <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:inputType="date"
+                    android:layout_margin="10dp"
+                    android:hint="Date"
+                    android:ems="10"
+                    android:id="@+id/etTargetDate" />
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Scope:"
                     android:layout_margin="10dp"
-                    android:textSize="10dp"
+                    android:textSize="20dp"
                     android:id="@+id/tvScope" />
                 <EditText
                     android:layout_width="match_parent"
@@ -141,11 +147,34 @@
                     android:minLines="2"
                     android:ems="10" />
                 <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Team Members:"
+                        android:layout_margin="10dp"
+                        android:textSize="20dp"
+                        android:layout_alignParentLeft="true"
+                        android:id="@+id/tvTeamMembers" />
+                <EditText
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:inputType="textPersonName"
+                        android:layout_margin="10dp"
+                        android:hint="Name"
+                        android:ems="10"
+                        android:id="@+id/etName" />
+                <EditText
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/etRole"
+                        android:layout_margin="10dp"
+                        android:hint="Role"
+                        android:ems="10" />
+                <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Location:"
                     android:layout_margin="10dp"
-                    android:textSize="10dp"
+                    android:textSize="20dp"
                     android:id="@+id/tvLocation" />
                 <EditText
                     android:layout_width="wrap_content"
@@ -159,7 +188,7 @@
                     android:layout_height="wrap_content"
                     android:text="Deskbook Version:"
                     android:layout_margin="10dp"
-                    android:textSize="10dp"
+                    android:textSize="20dp"
                     android:id="@+id/tvDeskbookVersion" />
                 <Spinner
                     android:id="@+id/spDeskbookVersion"
@@ -167,25 +196,15 @@
                     android:layout_height="wrap_content"
                     android:layout_margin="10dp"
                     android:entries="@array/deskbookVersions"/>
-                <LinearLayout
+                <Button
+                    android:id="@+id/btnStart"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:orientation="horizontal">
-                    <Button
-                        android:id="@+id/btnHelpImport"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Help Importing"
-                        android:layout_margin="10dp"
-                        style="@style/Widget.AppCompat.Button.Colored"/>
-                    <Button
-                        android:id="@+id/btnImport"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_margin="10dp"
-                        android:text="Import Assessment"
-                        style="@style/Widget.AppCompat.Button.Colored"/>
-                </LinearLayout>
+                    android:layout_margin="10dp"
+                    android:text="Start"
+                    android:textColor="#FFFFFF"
+                    android:layout_alignParentRight="true"
+                    android:background="@drawable/blue_rectangle"/>
             </LinearLayout>
         </ScrollView>
     </LinearLayout>

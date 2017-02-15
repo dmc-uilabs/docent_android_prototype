@@ -13,6 +13,7 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ImageButton;
 import android.widget.LinearLayout;
+import android.widget.RadioGroup;
 import android.widget.Spinner;
 
 public class QuestionnaireActivity extends AppCompatActivity {
@@ -36,36 +37,25 @@ public class QuestionnaireActivity extends AppCompatActivity {
             }
         });
 
-        Spinner spAnswer = (Spinner) findViewById(R.id.spAnswer);
-        spAnswer.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener()
-        {
-            public void onItemSelected(AdapterView<?> parent, View view, int position, long id)
-            {
-
-                if(position == 0){
-                    mLayoutYes.setVisibility(View.GONE);
+        RadioGroup rgAnswer = (RadioGroup) findViewById(R.id.rgAnswers);
+        rgAnswer.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup radioGroup, int i){
+                if(i == R.id.rbYes){
+                    mLayoutYes.setVisibility(View.VISIBLE);
                     mLayoutNo.setVisibility(View.GONE);
                     mLayoutNotApplicable.setVisibility(View.GONE);
                 }
-                if(position == 1){
-                   mLayoutYes.setVisibility(View.VISIBLE);
-                   mLayoutNo.setVisibility(View.GONE);
-                   mLayoutNotApplicable.setVisibility(View.GONE);
+                if(i == R.id.rbNo){
+                    mLayoutYes.setVisibility(View.GONE);
+                    mLayoutNo.setVisibility(View.VISIBLE);
+                    mLayoutNotApplicable.setVisibility(View.GONE);
                 }
-                if(position == 2){
-                   mLayoutYes.setVisibility(View.GONE);
-                   mLayoutNo.setVisibility(View.VISIBLE);
-                   mLayoutNotApplicable.setVisibility(View.GONE);
+                if(i == R.id.rbNA){
+                    mLayoutYes.setVisibility(View.GONE);
+                    mLayoutNo.setVisibility(View.GONE);
+                    mLayoutNotApplicable.setVisibility(View.VISIBLE);
                 }
-                if(position == 3){
-                   mLayoutYes.setVisibility(View.GONE);
-                   mLayoutNo.setVisibility(View.GONE);
-                   mLayoutNotApplicable.setVisibility(View.VISIBLE);
-                }
-            } // to close the onItemSelected
-            public void onNothingSelected(AdapterView<?> parent)
-            {
-
             }
         });
     }
@@ -82,16 +72,12 @@ public class QuestionnaireActivity extends AppCompatActivity {
         // Handle item selection
         switch (item.getItemId()) {
             case R.id.menuMrl:
-                Intent intent = new Intent(QuestionnaireActivity.this, CriteriaActivity.class);
+                Intent intent = new Intent(QuestionnaireActivity.this, CriteriaGridActivity.class);
                 startActivity(intent);
                 return true;
             case R.id.menuAssessment:
                 Intent assessmentIntent = new Intent(QuestionnaireActivity.this, MainActivity.class);
                 startActivity(assessmentIntent);
-                return true;
-            case R.id.menuMilestones:
-                Intent milestonesIntent = new Intent(QuestionnaireActivity.this, MilestonesActivity.class);
-                startActivity(milestonesIntent);
                 return true;
             default:
                 return super.onOptionsItemSelected(item);

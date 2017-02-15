@@ -138,11 +138,12 @@ public class CriteriaGridActivity extends AppCompatActivity {
                     mLayoutLevel.setVisibility(View.GONE);
                     mLayoutThread.setVisibility(View.VISIBLE);
                 }
-                if(checkedId == R.id.rbAll){
+            /*    if(checkedId == R.id.rbAll){
                     mLayoutAll.setVisibility(View.VISIBLE);
                     mLayoutLevel.setVisibility(View.GONE);
                     mLayoutThread.setVisibility(View.GONE);
                 }
+                */
             }
         });
 
@@ -281,6 +282,8 @@ public class CriteriaGridActivity extends AppCompatActivity {
             }
         });
 
+        RadioButton mRbLevel5 = (RadioButton) findViewById(R.id.rbLevel5);
+        mRbLevel5.setChecked(true);
     }
 
     @Override
@@ -309,10 +312,6 @@ public class CriteriaGridActivity extends AppCompatActivity {
             case R.id.menuAssessment:
                 Intent assessmentIntent = new Intent(CriteriaGridActivity.this, MainActivity.class);
                 startActivity(assessmentIntent);
-                return true;
-            case R.id.menuMilestones:
-                Intent milestonesIntent = new Intent(CriteriaGridActivity.this, MilestonesActivity.class);
-                startActivity(milestonesIntent);
                 return true;
             default:
                 return super.onOptionsItemSelected(item);

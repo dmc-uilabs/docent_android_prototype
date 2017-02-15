@@ -20,9 +20,9 @@
     </string-array>
     <string-array name="threadsArray">
         <item>Technology Maturity</item>
-        <item>Technology and Industrial Base</item>
-        <item>Design</item>
-        <item>Cost and Funding</item>
+        <item>Industrial Base</item>
+        <item>Manufacturing Technology Development</item>
+        <item>Producibility Program</item>
     </string-array>
     <string-array name="criteriaThread0">
         <item>Thread</item>
@@ -69,30 +69,30 @@
     <string-array name="criteriaThread3">
         <item></item>
         <item></item>
-        <item>Should be assessed at TRL 1</item>
-        <item>Should be assessed at TRL 2</item>
-        <item>Should be assessed at TRL 3</item>
-        <item>Should be assessed at TRL 4</item>
-        <item>Should be assessed at TRL 5</item>
-        <item>Should be assessed at TRL 6</item>
-        <item>Should be assessed at TRL 7</item>
-        <item>Should be assessed at TRL 7 or TRL 8</item>
-        <item>Should be assessed at TRL 8 or TRL 9</item>
-        <item>Should be assessed at TRL 9</item>
+        <item></item>
+        <item>New manufacturing concepts and potential solutions identified.</item>
+        <item>Manufacturing technology concepts identified through experiments/models.</item>
+        <item>Manufacturing Science and Advanced Manufacturing Technology requirements identified.</item>
+        <item>Required manufacturing technology development efforts initiated, if applicable.</item>
+        <item>Manufacturing technology efforts continuing. Required manufacturing technology development solutions demonstrated in a production relevant environment.</item>
+        <item>Manufacturing technology efforts continuing. Required manufacturing technology development solutions demonstr ated in a production representative environment.</item>
+        <item>Primary manufacturing technology efforts concluding and some improvement efforts continuing. Required manufacturing technology solutions validated on a pilot line.</item>
+        <item>Manufacturing technology process improvement efforts initiated for FRP.</item>
+        <item>Manufacturing technology continuous process improvements ongoing.</item>
     </string-array>
     <string-array name="criteriaThread4">
         <item></item>
         <item></item>
-        <item>Should be assessed at TRL 1</item>
-        <item>Should be assessed at TRL 2</item>
-        <item>Should be assessed at TRL 3</item>
-        <item>Should be assessed at TRL 4</item>
-        <item>Should be assessed at TRL 5</item>
-        <item>Should be assessed at TRL 6</item>
-        <item>Should be assessed at TRL 7</item>
-        <item>Should be assessed at TRL 7 or TRL 8</item>
-        <item>Should be assessed at TRL 8 or TRL 9</item>
-        <item>Should be assessed at TRL 9</item>
+        <item></item>
+        <item></item>
+        <item>Relevant materials/processes evaluated for manufacturability using experiments/models.</item>
+        <item>Initial producibility and manufacturability assessment of preferred systems concepts completed. Results considered in selection of preferred design concepts and reflected in AS key components/technologies.</item>
+        <item>Producibility and manufacturability assessments of key technologies and components initiated as appropriate. Ongoing design trades consider manufacturing processes and industrial base capability constraints. Manufacturing processes assessed for capability to test and verify in production, and influence on operations and support.</item>
+        <item>Producibility assessments and producibility trade studies (performance vs. producibility) of key technologies/components completed. Results used to shape Acquisition Strategy, SEP, Manufacturing and Producibility plans, and planning for EMD or technology insertion programs. Preliminary design choices assessed against manufacturing processes and industrial base capability constraints. Producibility enhancement efforts (e.g., Design for Manufacturing and Design for Assembly</item>
+        <item>Detailed producibility trade studies using knowledge of key design characteristics and related manufacturing process capability completed. Producibility enhancement efforts (e.g., Design for Manufacturing, Design for Assembly)ongoing for optimized integrated system. Manufacturing processes reassessed as needed for capability to test and verify potential influence on operations and support.</item>
+        <item>Producibility improvements implemented on system. Known producibility issues have been resolved and pose no significant risk for LRIP.</item>
+        <item>Prior producibility improvements analyzed for effectiveness during LRIP. Producibility issues/risks discovered in LRIP have been mitigated and pose no significant risk for FRP.</item>
+        <item>Design producibility improvements demonstrated in FRP. Process producibility improvements ongoing. All modifications, upgrades, DMSMS, and other changes assessed for producibility.</item>
     </string-array>
     <string-array name="deskbookVersions">
         <item>V2.4 - August 2015</item>

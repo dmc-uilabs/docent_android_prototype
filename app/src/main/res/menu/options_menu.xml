@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <item android:id="@+id/menuMrl"
-        android:title="MRL Criteria" />
-    <item android:id="@+id/menuMilestones"
-        android:title="Milestones" />
+        android:title="MRL Criteria"/>
     <item android:id="@+id/menuAssessment"
         android:title="Assessment"/>
 </menu>

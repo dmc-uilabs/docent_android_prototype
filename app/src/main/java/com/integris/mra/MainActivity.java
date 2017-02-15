@@ -17,6 +17,18 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+/*        if(getActionBar() != null){
+            getActionBar().setDisplayUseLogoEnabled(true);
+            getActionBar().setDisplayHomeAsUpEnabled(true);
+            getActionBar().setLogo(R.drawable.docent_logo);
+        }else {
+            if (getSupportActionBar() != null) {
+                getSupportActionBar().setDisplayUseLogoEnabled(true);
+                getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+                getSupportActionBar().setLogo(R.drawable.docent_logo);
+            }
+        }
+*/
         Button button = (Button) findViewById(R.id.btnStart);
         button.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
@@ -62,10 +74,6 @@ public class MainActivity extends AppCompatActivity {
             case R.id.menuAssessment:
                 Intent assessmentIntent = new Intent(MainActivity.this, QuestionnaireActivity.class);
                 startActivity(assessmentIntent);
-                return true;
-            case R.id.menuMilestones:
-                Intent milestonesIntent = new Intent(MainActivity.this, MilestonesActivity.class);
-                startActivity(milestonesIntent);
                 return true;
             default:
                 return super.onOptionsItemSelected(item);
